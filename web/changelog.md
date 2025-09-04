@@ -18,7 +18,22 @@ and start a new "Upcoming" section.
 {% include changelog_header.html version="Upcoming" %}
 Note: Porting efforts to bring Botania to 1.21+ versions of Minecraft (supporting both Fabric and NeoForge) are ongoing.
 We cannot provide any ETA (even a rough one) due to the complexity of the work involved and the somewhat limited amount
-of time the maintainers are able to spend on this effort. For the time being, updates still target Minecraft 1.20.1.
+of time the maintainers are able to spend on this effort.
+In the meantime, Botania for Minecraft 1.20.1 may still receive updates for bug fixes.
+
+---
+
+{% include changelog_header.html version="1.20.1-450" %}
+
+* Add: Support for Quark's attribute tooltips, displaying the Pixie Spawn Chance on Elementium armor and sword in icon form
+* Fix: Botania's Creative inventory tab no longer randomly shows up among the vanilla tabs
+* Fix: Rod of the Sea and Extrapolated Bucket may vanish when interacting with cauldrons
+* Fix: Partially reverted an internal change that needlessly caused an incompatibility with existing versions of ExtraBotany
+* Fix: Ensure spark textures and animated Tiara wings are animated in the presence of Sodium or its various Forge ports
+
+---
+
+{% include changelog_header.html version="1.20.1-449" %}
 
 * Add: Several missing Forge tags for blocks, items, and entities
 * Add: Munchdew displays particles while in cooldown, similar to a Thermalily (this used to be a thing a long time ago already, but somehow got lost)
@@ -42,8 +57,13 @@ of time the maintainers are able to spend on this effort. For the time being, up
 * Fix: Remaining content in brew vials/flasks and mana bottles would not display properly
 * Fix: Monocle item frame overlay did not properly expand background frame to account for multi-row contained items display
 * Fix: Some spark transfers towards a pool linked with a Mana Mirror sometimes shut down and fail to start up again when the pool is not full anymore
+* Fix: Rod of the Lands/Depths behaved differently than a block of dirt or cobblestone when aiming at a replaceable block, such as grass or fern (NEstoll)
+* Fix: Unbreaking enchantment properly reduces mana consumption for preventing damage to mana-repairable equipment (NEstoll)
+* Fix: When slots of a Crafty Crate get locked while containing any items, those items are forcibly ejected
 * Internal: Optimized texture file compression
 * Internal: An old to-do list for the lexicon migration to Patchouli is no longer included in the compiled jars (this caused a harmless log error on startup)
+* Internal: Changed the way platform-specific loading of API implementations is handled to hopefully prevent a loading
+  failure that has popped up especially in Patchouli on NeoForge but apparently can also happen to Botania on Forge
 * Recipe changes:\
   (only significant uses of item tags have been added, a more thorough use of tags is postponed until 1.21)
   * On Forge, any recipe that uses colorless glass blocks or panes is now defined using the corresponding item tags
@@ -51,11 +71,12 @@ of time the maintainers are able to spend on this effort. For the time being, up
   * Phantom Ink and Floral Fertilizer recipes use the dye item tags on both Forge and Fabric
   * The Phantom Ink recipe uses the any-color glass item tags on both Forge and Fabric
 * Language updates:
-  * zh_cn updated (Dawnwalker666)
+  * tr_tr added (RuyaSavascisi)
+  * pt_br overhauled (Coffee-0xFF)
+  * ru_ru overhauled (kkylern)
   * zh_tw overhauled (Dawnwalker666, EvanHsieh0415, lakejason0, notlin4, williewillus)
   * ko_kr updated (UnineVesiKass)
-  * tr_tr added (RuyaSavascisi)
-  * ru_ru overhauled (kkylern)
+  * zh_cn updated (Dawnwalker666)
 
 ---
 
